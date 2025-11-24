@@ -1,7 +1,15 @@
 import logoDark from "./logo-dark.svg";
 import logoLight from "./logo-light.svg";
+import {useEffect} from "react";
 
 export function Welcome() {
+  useEffect(() => { 
+    fetch("https://av-ephfbnhtgrh8e2fu.westeurope-01.azurewebsites.net/api/AVGetFunction?code=nPJE8R0lCiDDyTySa87AIjtrkK5fm9991MKu50I5q1dEAzFuu2HRuQ==").then(x=>{
+      console.log(x);
+    });
+    return ()=>{};
+  }, []);
+  
   return (
     <main className="flex items-center justify-center pt-16 pb-4">
       <div className="flex-1 flex flex-col items-center gap-16 min-h-0">
