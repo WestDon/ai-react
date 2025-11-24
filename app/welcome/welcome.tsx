@@ -4,7 +4,7 @@ import {useEffect} from "react";
 
 export function Welcome() {
   useEffect(() => { 
-    fetch("https://av-ephfbnhtgrh8e2fu.westeurope-01.azurewebsites.net/api/AVGetFunction").then(x=>{
+    fetch("https://av-apim.azure-api.net/av/AVGetFunction").then(x=>{
       console.log(x);
     });
     return ()=>{};
